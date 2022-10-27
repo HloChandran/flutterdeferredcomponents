@@ -1,0 +1,47 @@
+name: deferred_components
+description: Deferred components
+publish_to: 'none'
+version: 27.0.0+27
+
+
+environment:
+  sdk: ">=2.15.1 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  flutter_modular: ^5.0.3
+  fluttertoast: ^8.0.9
+  provider: ^6.0.4 
+
+  assets_module:
+     path: ./modular/assets_module
+
+  data_modular:
+     path: ./modular/data_modular   
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+
+flutter:
+  uses-material-design: true
+
+         
+  deferred-components:
+    - name: newdeferred
+      libraries:
+        - package:assets_module/main.dart
+        - package:assets_module/second.dart
+      assets:
+       - assets/assets_module/img/
+    - name: datadeferred
+      libraries:
+        - package:data_modular/main.dart
+        
+      
+    
+   
+
